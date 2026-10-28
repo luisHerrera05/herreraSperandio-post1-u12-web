@@ -6,7 +6,6 @@ Contiene una API REST Spring Boot (Categoría / Producto) dockerizada con un Doc
 multi-stage y perfiles dev/prod (Parte 1), y su extensión con un pipeline de integración
 continua con GitHub Actions y monitoreo con Spring Boot Actuator (Parte 2).
 
-![CI Status](https://github.com/luisHerrera05/herrera-post1-u12/actions/workflows/ci.yml/badge.svg)
 
 ## Parte 1 — Dockerización con Perfiles y Variables de Entorno
 El Dockerfile multi-stage compila el proyecto con Maven en una etapa JDK y ejecuta el JAR
