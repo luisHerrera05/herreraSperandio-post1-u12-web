@@ -38,12 +38,6 @@ El pipeline (`.github/workflows/ci.yml`) se activa en cada push y pull request a
    consulta `/actuator/health` hasta obtener `UP`. Siempre elimina el contenedor al final
    (`if: always()`). No publica la imagen en ningún registro externo.
 
-## Despliegue (paso final manual)
-La aplicación se despliega en Railway/Render a partir del mismo Dockerfile, con las variables
-de entorno configuradas en el panel de la plataforma:
-
-- URL de la aplicación: `https://TU-APP.up.railway.app`
-- Health: `https://TU-APP.up.railway.app/actuator/health`
 
 ## Decisiones de diseño
 
@@ -89,10 +83,3 @@ de entorno configuradas en el panel de la plataforma:
 6. Endpoints: `GET/POST /api/categorias`, `GET/POST/PUT/DELETE /api/productos[/{id}]`
 7. Pipeline: pestaña **Actions** del repositorio.
 
-## Capturas de pantalla
-![Imagen Docker construida localmente](capturas/docker-images.png)
-![Contenedor respondiendo UP en local](capturas/actuator-health-local.png)
-![GitHub Actions con checks verdes](capturas/github-actions.png)
-![Smoke test respondiendo UP en el pipeline](capturas/smoke-test-log.png)
-![Panel de Railway o Render con el despliegue activo](capturas/railway-panel.png)
-![Endpoint /actuator/health en la URL pública](capturas/railway-health.png)
